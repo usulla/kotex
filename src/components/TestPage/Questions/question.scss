@@ -1,0 +1,21 @@
+.question {
+    .question__qnum {
+        color: $red;
+        font-weight: 800;
+        font-size: 3.5vw;
+        line-height: 4vw;
+        margin-bottom: 8px;
+        display: block;
+    }
+    .question__title {
+        color: $black;
+        text-transform: uppercase;
+        font-family: $font_family;
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.8vw;
+        line-height: 1.4;
+        min-height: 13vh;
+        margin-bottom: 20px;
+    }
+}
