@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav.jsx';
 import ToggleMenu from '../ToggleMenu/ToggleMenu.jsx';
 import MobileMenu from '../MobileMenu/MobileMenu.jsx';
-import {Header} from 'react-fullpage';
 import header_girl from '../../images/header/header_girl.png';
 import header_packs from '../../images/header/header_packs.png';
 import header_logo from '../../images/header/header_logo.png';

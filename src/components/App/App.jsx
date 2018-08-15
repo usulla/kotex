@@ -9,44 +9,22 @@ import PacksPage from '../PacksPage/PacksPage.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Nav from '../Nav/Nav.jsx';
 import change_or_girl from '../../images/change_or_girl.png';
-import {SectionsContainer, Section, Header} from 'react-fullpage';
 // import dataSkills from '../../data/dataskills.js';
 import './app.js';
 
 class App extends Component {
     render() {
-     let options = {
-      responsiveWidth: 900,
-      sectionClassName:'section',
-      anchors:['sectionOne', 'sectionTwo', 'sectionThree', 'section4', 'section5', 'section6', 'section7', 'section8'],
-      scrollBar:            false,
-      navigation:           false,
-      arrowNavigation:      false,
-      scrollCallback: (states) => {
-        if (states.activeSection != 0){
-        document.querySelector('.menu').classList.add('small');
-        document.querySelector('.logo').classList.add('small');
-        }
-        else{
-        document.querySelector('.menu').classList.remove('small');
-        document.querySelector('.logo').classList.remove('small');
-        }
-       }
-      }
-     
         return (
             <div>
-            <Header><Nav list={[['Конкурс','sectionThree'],['Тест','section6'],['История успеха','sectionTwo'],['О продукте', 'section8']]}/> </Header>
-            <SectionsContainer className="container" {...options}>
-                <Section><HeaderBlock/></Section>
-                <Section><VideoFullPage/></Section>
-                <Section><ContestPage listmembers={listMembers}/></Section>
-                <Section><PrizesPage/></Section>
-                <Section><MembersPage listmembers={listMembers}/></Section>
-                <Section><TestPage datatest={dataTest} dataresults={dataResults}/></Section>
-                <Section><PacksPage/></Section>
-                <Section><Footer/></Section>
-            </SectionsContainer>
+            <Nav list={[['Конкурс','sectionThree'],['Тест','section6'],['История успеха','sectionTwo'],['О продукте', 'section8']]}/>
+                <HeaderBlock/>
+                <VideoFullPage/>
+                <ContestPage listmembers={listMembers}/>
+                <PrizesPage/>
+                <MembersPage listmembers={listMembers}/>
+                <TestPage datatest={dataTest} dataresults={dataResults}/>
+                <PacksPage/>
+                <Footer/>
             </div>
    
         );
